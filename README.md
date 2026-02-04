@@ -65,12 +65,47 @@ Recording your child's baseball games is easy. Finding and editing quality clips
    cd SwingExtractor
    ```
 
-3. **Install Python Dependencies**:
+3. **Set Up a Virtual Environment** (Recommended):
+   
+   Using a virtual environment helps isolate project dependencies and avoid conflicts with other Python projects.
+   
+   **On Linux/macOS**:
+   ```bash
+   # Create a virtual environment
+   python3 -m venv venv
+   
+   # Activate the virtual environment
+   source venv/bin/activate
+   ```
+   
+   **On Windows**:
+   ```bash
+   # Create a virtual environment
+   python -m venv venv
+   
+   # Activate the virtual environment
+   venv\Scripts\activate
+   ```
+   
+   When the virtual environment is activated, you'll see `(venv)` in your command prompt.
+
+4. **Install Python Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
+   
+   **Note**: Make sure your virtual environment is activated before installing dependencies.
 
 ## 📝 Usage
+
+**Note**: If you're using a virtual environment, make sure it's activated before running SwingExtractor:
+```bash
+# Linux/macOS
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+```
 
 ### Basic Usage
 
@@ -125,6 +160,11 @@ Quickly generate shareable clips for posting on social media or sharing with fam
 5. **Use Consistent Recording Position**: Recording from similar positions helps maintain consistent detection accuracy
 
 ## 🛠️ Troubleshooting
+
+### Virtual Environment Issues
+- **Command not found after installation**: Make sure your virtual environment is activated
+- **To deactivate the virtual environment**: Simply run `deactivate` in your terminal
+- **To reactivate later**: Navigate to the project directory and run the activation command again
 
 ### Too Many False Positives
 - Increase the sensitivity value (closer to 1.0)
